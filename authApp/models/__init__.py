@@ -1,5 +1,5 @@
 
-from .user import User
+from .user import Usuario
 from .auxiliar import Auxiliar
 from .paciente import Paciente
 from .familiar import Familiar

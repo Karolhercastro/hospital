@@ -34,7 +34,7 @@ class UserManager(BaseUserManager):
 		return user
      
 
-class User(AbstractBaseUser, PermissionsMixin):
+class Usuario(AbstractBaseUser, PermissionsMixin):
     #modelo Base de datos para usuarios en el sistema
     id= models.BigAutoField(primary_key=True)
     username= models.CharField('Username', max_length=20, unique=True)
