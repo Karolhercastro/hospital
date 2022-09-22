@@ -12,6 +12,6 @@ class Paciente (models.Model):
     direccion = models.CharField('residencia', max_length=50)
     ciudad = models.CharField('ciudad', max_length=20)
     id_registro = models.ForeignKey(
-        Auxiliar, related_name='id_auxiliar_registro_paciente', on_delete=models.CASCADE)
+        Auxiliar, related_name='id_auxiliar_registro_paciente', on_delete=models.SET_NULL)
     id_medico = models.ForeignKey(
-        Medico, related_name='id_paciente_medico', on_delete=models.CASCADE)
+        Medico, related_name='id_paciente_medico', on_delete=models.SET_NULL)

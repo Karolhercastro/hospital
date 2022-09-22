@@ -10,4 +10,4 @@ class Familiar (models.Model):
     create_date = models.DateField('create_date')
     relacion = models.CharField(max_length=20)
     id_registro = models.ForeignKey(
-        Auxiliar, related_name='id_auxiliar_registro_familiar', on_delete=models.CASCADE)
+        Auxiliar, related_name='id_auxiliar_registro_familiar', on_delete=models.SET_NULL)

@@ -14,9 +14,9 @@ class Signos (models.Model):
 	temperatura =models.CharField(null=True, max_length=20)
 	presion_arterial =models.CharField(null=True, max_length=20)
 	glicemias =models.CharField(null=True, max_length=20)
-	id_historias= models.ForeignKey(Historia, related_name='id_signos_historia', on_delete= models.CASCADE)
-	id_familiar = models.ForeignKey(Familiar, related_name= 'id_familiar_signos', on_delete= models.CASCADE)
-	id_paciente = models.ForeignKey(Paciente, related_name= 'id_paciente_signos', on_delete= models.CASCADE)
+	id_historias= models.ForeignKey(Historia, related_name='id_signos_historia', on_delete= models.SET_NULL)
+	id_familiar = models.ForeignKey(Familiar, related_name= 'id_familiar_signos', on_delete= models.SET_NULL)
+	id_paciente = models.ForeignKey(Paciente, related_name= 'id_paciente_signos', on_delete= models.SET_NULL)
 
 
 	
